@@ -1,5 +1,5 @@
 {% set name = "pygod" %}
-{% set version = "0.1.1" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pygod-{{ version }}.tar.gz
-  sha256: 801479cf290b9133c6dc7e9782563df7cae621dd337119ba2c3bb590182dafc5
+  sha256: ce199ad925201b4ea48a702f0ff3efdd8bc2ddf83063b33038face14b257d2fb
 
 build:
   noarch: python
