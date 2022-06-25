@@ -38,7 +38,7 @@ test:
     - pip list | grep -E "{{ name }}\s+{{ version }}"
   requires:
     - pip
-    - m2-grep  # [win]
+    - pytorch_cluster
 
 about:
   home: https://pygod.org/
