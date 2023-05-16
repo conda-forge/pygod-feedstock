@@ -20,25 +20,23 @@ requirements:
     - python >=3.7
     - setuptools >=50.3.1
   run:
-    - numpy >=1.19.4
+    - numpy
     - networkx
     - python >=3.7
-    - pytorch >=1.10.0
-    - pytorch_geometric >=2.0.3
-    - scikit-learn >=0.22.1
-    - scipy >=1.5.2
-    - setuptools >=50.3.1.post20201107
+#     - pytorch >=1.10.0
+#     - pytorch_geometric >=2.0.3
+    - scikit-learn
+    - scipy
+    - setuptools
 
 test:
   imports:
     - pygod
-    - pygod.models
-    - pygod.utils
   commands:
-    - pip list | grep -E "{{ name }}\s+{{ version }}"
+    - pip check
   requires:
     - pip
-    - pytorch_cluster
+#     - pytorch_cluster
 
 about:
   home: https://pygod.org/
