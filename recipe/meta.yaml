@@ -29,7 +29,7 @@ requirements:
     
     # Not listed as dependencies but needed when importing base package
     - pytorch
-    - pytorch_geometric
+    - pytorch_geometric >=2.3.0
 
 test:
   imports:
