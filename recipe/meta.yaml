@@ -23,13 +23,13 @@ requirements:
     - numpy
     - networkx
     - python >=3.7
-#     - pytorch_geometric >=2.0.3
     - scikit-learn
     - scipy
     - setuptools
     
     # Not listed as dependencies but needed when importing base package
     - pytorch
+    - pytorch_geometric
 
 test:
   imports:
