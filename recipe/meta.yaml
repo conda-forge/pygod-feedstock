@@ -1,5 +1,5 @@
 {% set name = "pygod" %}
-{% set version = "0.4.0" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pygod-{{ version }}.tar.gz
-  sha256: 90b66eb54f0caf9f9b085c73bce98ad501ec52f323cad4d090c53aa418e3ca9a
+  sha256: 37130e2dc95f0ae2d9d5daae2ab6e685cbdd210edf5d2bc01cd108f2a01668c8
 
 build:
   noarch: python
@@ -26,7 +26,7 @@ requirements:
     - scikit-learn
     - scipy
     - setuptools
-    
+
     # Not listed as dependencies but needed when importing base package
     - pytorch
     - pytorch_geometric >=2.3.0
