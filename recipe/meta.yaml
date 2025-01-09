@@ -6,27 +6,26 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pygod-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pygod-{{ version }}.tar.gz
   sha256: a9afd0db3a55b3ff20d24212cf85381db356456d6e21ba1f9687daf3619c5b36
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
     - setuptools >=38.6.0
   run:
     - numpy
     - networkx
-    - python >=3.7
+    - python >={{ python_min }}
     - scikit-learn
     - scipy
     - setuptools
-
     # Not listed as dependencies but needed when importing base package
     - pytorch
     - pytorch_geometric >=2.3.0
@@ -38,7 +37,7 @@ test:
     - pip check
   requires:
     - pip
-#     - pytorch_cluster
+    - python {{ python_min }}
 
 about:
   home: https://pygod.org/
